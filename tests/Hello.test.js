@@ -9,7 +9,7 @@ test('Hello', () => {
   expect(wrapper.find('span').length).toBe(0)
   wrapper.setProps({ show: true });
   wrapper.update();
-  console.log(wrapper.debug());
-  console.log(wrapper.html());
-  expect(wrapper.find('span').length).toBe(1)
+  console.log(wrapper.debug()); // no span
+  console.log(wrapper.html()); // has span
+  expect(wrapper.find('span').length).toBe(1) // failed
 });
